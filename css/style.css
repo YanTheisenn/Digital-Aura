@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppinsregular';
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    height: auto;
+}
+
+/*CSS DA BARRA DE NAVEGACAO*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    background-color: rgb(34, 34, 34);
+}
+
+nav a img {
+    height: 150px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #8C52FF;
+}
+
+nav .menu-icon {
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+}
+
+/*CSS PAGINA INDEX*/
+
+.mainindex {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box1 {
+    font-size: 25px;
+    margin-left: 50px;
+    margin: 50px 0px;
+}
+
+.mainindex h1 {
+    width: 550px;
+    color: white;
+}
+
+.h22 {
+    color: #8C52FF;
+}
+
+.box2 img {
+    max-width: 100%;
+    height: auto;
+    margin: 50px 0px;
+}
+
+/*CSS PAGINA SERVICOS*/
+
+.titulo {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background-color: rgb(129, 129, 129);
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
+}
+
+.servico {
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    background-color: rgb(129, 129, 129);
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+
+/*CSS PAGINA EQUIPE*/
+
+.pessoas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    padding: 20px 0px;
+}
+
+.pessoas img {
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.562);
+}
+
+.pessoa1, .pessoa2, .pessoa3, .pessoa4 {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 300px;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: rgb(129, 129, 129);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.562);
+}
+
+.descricao {
+    margin: 0px 20px;
+    text-align: justify;
+    font-size: 110%;
+}
+
+/*CSS PAGINA CONTATOS*/
+
+.contato1, .contato2 {
+    width: 45%;
+    background-color: rgb(129, 129, 129);
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+}
+
+.contato2 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato2 label {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contato2 input, .contato2 textarea {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contato2 button {
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 15px;
+    background-color: #8C52FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contato2 button:hover {
+    background-color: #7039d8;
+}
+
+.contato h1 {
+    font-size: 22px;
+    color: white;
+}
+
+/*CSS DOS ICONES*/
+
+i {
+    font-size: 40px;
+    color: white;
+}
+
+.icones {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icones li {
+    margin: 0 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.068);
+}
+
+footer p {
+    padding: 10px 0;
+    color: white;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: rgb(34, 34, 34);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .nav-list.active li {
+        margin: 20px 0;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    .mainindex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box1 {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .mainindex h1 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    nav a img {
+        height: 100px;
+    }
+
+    .box2 img {
+        max-width: 80%;
+        margin: 20px 0;
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+    .pessoas {
+        height: auto;
+        padding: 10px;
+    }
+
+    .pessoa1, .pessoa2, .pessoa3, .pessoa4 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .pessoas img {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .descricao {
+        margin: 10px 0;
+    }
+
+    .titulo {
+        width: 100%;
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .servico {
+        width: 90%;
+        font-size: 18px;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .contato1, .contato2 {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .contato2 button {
+        width: 100%;
+    }
+}
